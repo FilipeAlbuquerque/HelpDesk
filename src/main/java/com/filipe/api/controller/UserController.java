@@ -87,7 +87,7 @@ public class UserController {
 			}
 
 			user.setPassword(passwordEncoder.encode(user.getPassword()));
-			User userPersisted = (User) userService.createOrUpdate(user);
+			User userPersisted = userService.createOrUpdate(user);
 			response.setData(userPersisted);
 
 		} catch (Exception e) {
